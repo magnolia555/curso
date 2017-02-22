@@ -1,3 +1,2 @@
 # curso
-Curso de git
-Ejercicios y ejemplos
+Curso de git - Ejercicios y ejemplos
