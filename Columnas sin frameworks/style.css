@@ -1,0 +1,152 @@
+body,html,h2{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    background: #eee;
+    font-family: sans-serif;
+    color: #333;
+}
+
+h2{
+    text-align: center;   
+    font-size:1em;
+}
+
+.fila{
+    width:90%;
+    margin: 2% auto;
+   /* background: #fff;*/
+    overflow: hidden; /*apara ponder floats dentro*/
+}
+
+.columna{
+    background: lightblue;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 2%;
+    padding:1em;
+    width:100%; /*generales menos de 480*/
+}
+
+
+/*******************Media queries**********************/
+
+/*480 para arriba*/
+@media (min-width:480px){
+    /*****************cuatro columnas y seis columnas son 2 en small****************/
+    .cuatro-columnas .columna,.seis-columnas .columna{
+        width:49%;
+    }
+    
+    .cuatro-columnas .columna:nth-child(2n),.seis-columnas .columna:nth-child(2n){
+        margin-right:0;
+    }
+
+    /*****************doce columnas****************/
+    .doce-columnas .columna{
+        width:32%;
+    }
+
+    .doce-columnas .columna:nth-child(3n){
+        margin-right:0;
+    }
+}
+
+
+@media (min-width:768px){
+    
+    /*****************tres columnas****************/
+    .tres-columnas .columna{
+        width:32%;
+    }
+
+    .tres-columnas .columna:nth-child(3n){
+        margin-right:0;
+    }
+
+    /*****************seis columnas****************/
+    .seis-columnas .columna{
+        width:15%;
+    }
+    
+    .seis-columnas .columna:nth-child(2n){
+        margin-right:2%;
+    }
+
+    .seis-columnas .columna:nth-child(6n){
+        margin-right:0;
+    }
+    
+    /***************right y left sidebar*********************/
+    .right-sidebar .sidebar,.left-sidebar .sidebar{
+        width:23.5%;
+    }
+
+    .right-sidebar .content,.left-sidebar .content{
+        width:74.5%;
+    }
+
+    .right-sidebar .sidebar{
+        margin-right: 0;
+    }
+
+    .left-sidebar .content{
+        margin-right: 0;
+    }
+
+    /*****************doce columnas****************/
+    .doce-columnas .columna{
+        width:23.5%;
+    }
+
+    .doce-columnas .columna:nth-child(3n){
+        margin-right:2%;
+    }
+
+    .doce-columnas .columna:nth-child(4n){
+        margin-right:0;
+    }
+}
+
+
+@media (min-width:1024px){
+    /*****************dos columnas****************/
+    .dos-columnas .columna{
+        width: 49%;
+    }
+
+    .dos-columnas .columna:nth-child(2n){
+        margin-right:0;
+    }
+
+    /*****************cuatro columnas****************/
+    .cuatro-columnas .columna{
+        width:23.5%;
+    }
+    
+    .cuatro-columnas .columna:nth-child(2n){
+        margin-right:2%;
+    }
+
+    .cuatro-columnas .columna:nth-child(4n){
+        margin-right:0;
+    }
+
+
+    /*****************doce columnas****************/
+    .doce-columnas .columna{
+        width:6.5%;
+    }
+    
+    .doce-columnas .columna:nth-child(4n){
+        margin-right:2%;
+    }
+
+    .doce-columnas .columna:nth-child(12n){
+        margin-right:0;
+    }
+
+}
